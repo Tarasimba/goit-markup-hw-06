@@ -110,24 +110,25 @@
             </div>
         </section>
         <section class="section">
-            <div class="container">
-                <h2 class="section-title">Чем мы занимаемся</h2>
-                <ul class="section-items list">
-                    <li class="item"><a href="">
-                        <img src="./images/klava-planshet.jpg" alt="Набирає команду" width="370"></a>
-                            <h3 class="practic__img-title">Десктопные приложения</h3>
-                    </li>
-                    <li class="item"><a href="">
-                        <img src="./images/tel-laptop.jpg" alt="Переглядає дизайн" width="370"></a>
-                            <h3 class="practic__img-title">Мобильные приложения</h3>
-                    </li>
-                    <li class="item"><a href="">
-                        <img src="./images/planshet-color.jpg" alt="Розглядає палітру кольорів" width="370"></a>
-                            <h3 class="practic__img-title">Дизайнерские решения</h3>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Чем мы занимаемся</h2>
+                    <ul class="section-items list">
+                        <li class="item"><a href="">
+                            <img src="./images/box-1.jpg" alt="Набирає команду" width="370"></a>
+                                <h3 class="practic__img-title">Десктопные приложения</h3>
+                        </li>
+                        <li class="item"><a href="">
+                            <img src="./images/box-2.jpg" alt="Переглядає дизайн" width="370"></a>
+                                <h3 class="practic__img-title">Мобильные приложения</h3>
+                        </li>
+                        <li class="item"><a href="">
+                            <img src="./images/box-3.jpg" alt="Розглядає палітру кольорів" width="370"></a>
+                                <h3 class="practic__img-title">Дизайнерские решения</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         <!-- Команда -->
         <section class="section bg-color">
             <div class="container">
@@ -371,11 +372,13 @@
                 <address class="address">
                     <ul class="address-items list">
                         <li class="item"><a href="https://goo.gl/maps/qfHzh91Hibz9nCDFA" target="_blank"
-                                rel="noopener noreferrer" class=" link decoration physical">г. Киев, пр-т Леси Украинки,
+                                rel="noopener noreferrer" class=" link decoration physical">г. Киев, пр-т Леси
+                                Украинки,
                                 26</a></li>
                         <li class="item"><a href="mailto:info@example.com" class="link decoration">info@example.com</a>
                         </li>
-                        <li class="item"><a href="tel:+380991111111" class="link decoration">+38 099 111 11 11</a></li>
+                        <li class="item"><a href="tel:+380991111111" class="link decoration">+38 099 111 11 11</a>
+                        </li>
                     </ul>
                 </address>
             </div>
@@ -416,6 +419,21 @@
                     </li>
                 </ul>
             </section>
+
+            <!-- Форма підписки -->
+            <section class="subscription">
+                <h3 class="subscription-title">Подпишитесь на рассылку</h3>
+                <form class="subscription-form">
+                    <label class="subscription-label">
+                        <input type="email" name="mail" placeholder="E-mail" class="subscription-input">
+                    </label>
+                    <button type="submit" class="btn form-btn">Подписаться
+                        <svg width="24px" height="24px" class="subscription-icon">
+                            <use href="./images/icons.svg#send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </section>
         </div>
 
     </footer>
@@ -424,10 +442,60 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="btn-closed" data-modal-close>
-                <svg width="18" height="18">
+                <svg width="18" height="18" class="closed-icon">
                     <use href="./images/icons.svg#close"></use>
                 </svg>
             </button>
+
+            <!-- Форма -->
+
+            <form class="form-sign">
+                <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+                <div class="form-field">
+                    <label class="form-label">
+                        <span class="form-text">Имя</span>
+                        <input type="text" name="name" class="form-input">
+                        <!-- <span class="form-icon"></span> -->
+                        <svg width="18" height="18px" class="form-icon">
+                            <use href="./images/icons.svg#person"></use>
+                        </svg>
+                    </label>
+                </div>
+                <div class="form-field">
+                    <label class="form-label">
+                        <span class="form-text">Телефон</span>
+                        <input type="tel" name="tel" class="form-input">
+                        <svg width="18" height="18px" class="form-icon">
+                            <use href="./images/icons.svg#phone"></use>
+                        </svg>
+                    </label>
+                </div>
+                <div class="form-field">
+                    <label class="form-label">
+                        <span class="form-text">Почта</span>
+                        <input type="email" name="mail" class="form-input">
+                        <svg width="18" height="18px" class="form-icon">
+                            <use href="./images/icons.svg#email"></use>
+                        </svg>
+                    </label>
+                </div>
+                <div class="form-field margin">
+                    <label class="form-label">
+                        <span class="form-text">Комментарий</span>
+                        <textarea name="feedback" rows="5" placeholder="Введите текст" class="form-comment"></textarea>
+                    </label>
+                </div>
+                <div class="form-field-check">
+                    <label class="form-label-check">
+                        <input type="checkbox" name="license" class="form-input-check">
+                        <span class="check-box"></span>
+                        <span class="form-text-check">Соглашаюсь с рассылкой и принимаю <a href=""
+                                class="form-link-check">Условия
+                                договора</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn form-btn">Отправить</button>
+            </form>
         </div>
     </div>
 
